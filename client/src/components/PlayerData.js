@@ -1,13 +1,39 @@
 import React from 'react';
 import axios from 'axios';
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5%;
+  align-items: center;
+
+  `
+
+  const Wrapper = styled.div`
+    font-family: The Wild Hammers;
+    width: 400px;
+    height: 200px;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border: .5px solid black;
+    border-radius: 10px;
+    margin-bottom: 7%;
+    background: slategray;
+    box-shadow: 5px 5px 5px black;
+    `
 
 const Player = ({name, country}) => {
     return (
-        <section className = "play-info-section">
+        <section>
+        <Wrapper>
             <h2>Player's Name:</h2>
             <h4>{ name}</h4>
             <p>Country of Origin: {country}</p>
             <hr></hr>
+            </Wrapper>
         </section>
     )
 }
@@ -31,7 +57,8 @@ class PlayerData extends React.Component {
     render () {
         return (
             <>
-            <section className = "player-info">
+            <Container>
+            {/* <section className = "player-info"> */}
                 {this.state.players.map (player => (
                     <Player 
                     key = {player.id}
@@ -39,7 +66,9 @@ class PlayerData extends React.Component {
                     country = {player.country}
                     />
                 ))}
-            </section>
+                {/* </section> */}
+                </Container>
+            
             </>
         );
     }

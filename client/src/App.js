@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Woman's World Cup Players: </h1>
-        <div className="player-card">
+        <div>
         <PlayerData />
         </div>
       </header>
