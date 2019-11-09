@@ -3,10 +3,11 @@ import axios from 'axios';
 
 const Player = ({name, country}) => {
     return (
-        <section className = "play info section">
-            <h1>Women's World Cup Players</h1>
-            <h2>Player's Name:{name}</h2>
-            <p>Player's Country of Origin {country}</p>
+        <section className = "play-info-section">
+            <h2>Player's Name:</h2>
+            <h4>{ name}</h4>
+            <p>Country of Origin: {country}</p>
+            <hr></hr>
         </section>
     )
 }
@@ -43,3 +44,5 @@ class PlayerData extends React.Component {
         );
     }
 }
+
+export default PlayerData; 
