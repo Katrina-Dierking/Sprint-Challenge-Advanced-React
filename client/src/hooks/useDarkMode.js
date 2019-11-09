@@ -3,7 +3,7 @@ import {useEffect} from 'react';
 
 const useDarkMode = (dark) => {
 
-    const [darkMode, setDarkMode] = useLocalStorate('dark'); 
+    const [darkMode, setDarkMode] = useLocalStorage('dark'); 
     
     useEffect (() => {
         if (darkMode === true) {

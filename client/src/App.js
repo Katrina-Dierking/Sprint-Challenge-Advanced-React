@@ -1,5 +1,6 @@
 import React from 'react';
 import PlayerData from './components/PlayerData';
+import ToggleBar from './components/ToggleBar';
 import './App.css';
 
 function App() {
@@ -7,10 +8,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Woman's World Cup Players: </h1>
-        <div>
+        </header>
+        
+        <div className="info-box">
+        <ToggleBar />
         <PlayerData />
         </div>
-      </header>
     </div>
   );
 }
