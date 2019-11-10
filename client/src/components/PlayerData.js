@@ -30,7 +30,7 @@ const Player = ({name, country}) => {
         
         <Wrapper>
             <h2>Player's Name:</h2>
-            <h4>{ name}</h4>
+            <h2>{ name}</h2>
             <p>Country of Origin: {country}</p>
             <hr></hr>
             </Wrapper>
@@ -44,7 +44,6 @@ class PlayerData extends React.Component {
     };
 
     componentDidMount = () => {
-
         axios.get("http://localhost:5000/api/players")
         .then (results => 
             {console.log(results, "player data");
@@ -61,7 +60,6 @@ class PlayerData extends React.Component {
         return (
             <>
             <Container>
-            {/* <section className = "player-info"> */}
                 {this.state.players.map (player => (
                     <Player 
                     key = {player.id}
@@ -69,7 +67,7 @@ class PlayerData extends React.Component {
                     country = {player.country}
                     />
                 ))}
-                {/* </section> */}
+        
                 </Container>
             
             </>
