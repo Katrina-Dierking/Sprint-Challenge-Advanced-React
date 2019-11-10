@@ -27,14 +27,14 @@ const Container = styled.div`
 
 const Player = ({name, country}) => {
     return (
-        <section>
+        
         <Wrapper>
             <h2>Player's Name:</h2>
             <h4>{ name}</h4>
             <p>Country of Origin: {country}</p>
             <hr></hr>
             </Wrapper>
-        </section>
+       
     )
 }
 
@@ -44,6 +44,7 @@ class PlayerData extends React.Component {
     };
 
     componentDidMount = () => {
+
         axios.get("http://localhost:5000/api/players")
         .then (results => 
             {console.log(results, "player data");
@@ -54,6 +55,8 @@ class PlayerData extends React.Component {
         .catch (error => console.log(error));
     };
 
+       
+    
     render () {
         return (
             <>
