@@ -23,9 +23,39 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
+
+A class component provides functionality that you wouldn't normally get by using function component -- such as lifestyle hooks. Class components are ES6 classes. They are more complex than functional components including constructors, life-cycle methods, render( ) function and state (data) management. 
+
+A React class component:
+*is an ES6 class, will be a component once it ‘extends’ React component.
+*can accept props (in the constructor) if needed
+*can maintain its own data with state
+*must have a render( ) method which returns a React element (JSX), or null
+
 - [ ] Name three lifecycle methods and their purposes.
+
+Mounting: The methods and events that take place here happen as the component is mounted in the DOM.
+Updating: Here the methods and events take place after the React component has entered the DOM.
+Un-mounting: Here the methods and events take place as they React component leaves the DOM or is unmounted from the DOM.
+
 - [ ] What is the purpose of a custom hook?
+Unlike a React component, a custom Hook doesn’t need to have a specific signature. We can decide what it takes as arguments, and what, if anything, it should return. In other words, it’s just like a normal function. Its name should always start with use so that you can tell at a glance that the rules of Hooks apply to it.
+
 - [ ] Why is it important to test our apps?
+
+Testing an app before it is published will show any bugs that may exist. You can test for accessibility which means anyone with a disability can still use the app the way it was intended. 
+
+System Testing is a crucial step in Quality Management Process.
+
+……..– In the Software Development Life cycle System Testing is the first level where
+………..the System is tested as a whole
+……..– The System is tested to verify if it meets the functional and technical
+………..requirements
+……..– The application/System is tested in an environment that closely resembles the
+………..production environment where the application will be finally deployed
+……..– The System Testing enables us to test, verify and validate both the Business
+………..requirements as well as the Application Architecture
+(Exfosys, 2006)
 
 ## Project Set Up
 
